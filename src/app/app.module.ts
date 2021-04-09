@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { ContentComponent } from './components/content/content.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    RankingComponent
+    RankingComponent,
+    ContentComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common'
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +20,14 @@ import { FooterComponent } from './components/footer/footer.component';
     RankingComponent,
     ContentComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { RankingComponent } from './components/ranking/ranking.component';
+import { ContentComponent } from './components/content/content.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -13,8 +16,10 @@ import { RankingComponent } from './components/ranking/ranking.component';
     AppComponent,
     MovieComponent,
     RankingComponent,
-    
-  
+    ContentComponent,
+    HeaderComponent,
+    FooterComponent
+
   ],
   imports: [
     BrowserModule,
@@ -25,3 +30,4 @@ import { RankingComponent } from './components/ranking/ranking.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

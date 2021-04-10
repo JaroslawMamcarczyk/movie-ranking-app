@@ -1,2 +1,20 @@
-<app-movie></app-movie>
-<app-ranking></app-ranking>
+<div class="container">
+    <div class="headerContainer"> <app-header></app-header></div>
+    <div class="topMenuContainer">
+            <div class="option"><a routerLink="/">Strona główna</a></div>
+           <div class="option"> <a routerLink="/movies">Filmy</a> </div>
+            <div class="option"><a routerLink="/rankings">Rankingi</a></div>
+            <div style="clear:both"></div>
+    </div>
+    <nav class="menuContainer">
+        <ul>
+        <li><a routerLink="/">Strona główna</a></li>
+        <li><a routerLink="/movies">Filmy</a></li>
+        <li><a routerLink="/rankings">Rankingi</a></li>
+    </ul>
+    </nav>
+    <div class="contentContainer">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="footerContainer"> <app-footer></app-footer>></div>
+</div>

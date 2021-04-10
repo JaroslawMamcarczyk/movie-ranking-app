@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: grey;
+    background:  url('./app/resources/milky.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+.container{
+	width: 98%;
+	background-size: cover;
+	margin: 0 auto;
+}
+.headerContainer {
+    height: 8vh;
+    background: url('./app/resources/film.jpg')no-repeat center center fixed;
+}
+.topMenuContainer{
+    padding-left: 10%;
+    background-color: #27c;
+}
+.contentContainer{
+    padding-left: 1%;
+    width: 89%;
+    min-height: 70vh;
+    background-color:#e9b9bb;
+    text-align: justify;
+    float: left;
+	
+}
+.menuContainer {	
+    width: 10%;
+    min-height: 70vh;
+    background-color: #27c;
+    float: left;
+    text-align: left;
+}
+
+.footerContainer { 
+    clear: both;
+    }	
+    
+.option{
+    float: left;
+    min-width: 50px;
+    height: 25px;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.option:hover{
+    background-color: azure;
+    cursor: pointer;
+}
+
+.test{
+    background-color: black;
+    color: aliceblue;
+}
+
+ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	width: 95%;
+	padding: 2px 2px 1px 2px;
+	background-color: #9ce;
+	border: 3px double #28e;
+}
+
+ul li {
+	border-bottom: 1px solid #9ce;
+}
+
+ul a:link, ul a:visited {
+	display: block;
+	width: 85%;
+	text-decoration: none;
+	padding: 7px;
+	font-weight: bold;
+	background-color: #27c;
+	color: #def;
+	border-left: 10px solid #25b;
+}
+
+ul a:hover {
+	width: 80%;
+	background-color: #28e;
+	color: #fff;
+	border-left: 20px solid #26d;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+	padding: 7px;
+	font-weight: bold;
+	background-color: #27c;
+	color: #def;
+}
+a:hover {
+	background-color: #28e;
+	color: #fff;
+}

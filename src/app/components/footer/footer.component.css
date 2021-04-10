@@ -1,0 +1,13 @@
+
+.footer { 
+    color: aliceblue;
+    text-align: right;
+}
+
+.lewa{
+	display:inline;
+}
+
+.prawa{
+	text-align: end;
+}

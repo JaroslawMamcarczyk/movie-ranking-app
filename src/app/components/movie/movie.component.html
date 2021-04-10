@@ -1,1 +1,7 @@
-<p>Lista filmów</p>
+<div>
+   {{movieArray[1].title}}<br />
+   {{movieArray[2].logo}}<br />
+
+ <a *ngFor="let movie on movieArray">{{movie}}</a>
+</div>
+

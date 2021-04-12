@@ -1,1 +1,7 @@
-<p>ranking-details works!</p>
+<div>
+        {{ranking.category}}<br />
+        {{ranking.description}}
+    <ul *ngFor="let movie on ranking.movie">
+        <li>{{movie.title}}</li>
+    </ul>
+</div>

@@ -9,7 +9,7 @@ import { RankingDetailsComponent } from './components/ranking-details/ranking-de
 const routes: Routes = [
   {path: 'movies', component: MovieComponent},
   {path: 'rankings', component: RankingComponent},
-  {path: 'rankings/ detail:id', component: RankingDetailsComponent},
+  {path: 'rankings/detail/:id', component: RankingDetailsComponent},
   {path: '', component:ContentComponent,pathMatch: 'full'},
   { path: '**', component: ContentComponent }
 

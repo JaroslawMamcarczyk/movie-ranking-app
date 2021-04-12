@@ -12,8 +12,13 @@ export class RankingClientService {
     return this.httpClient.get<Ranking[]>('http://localhost:8080/ranking');
   }
 
+  public getRankingById(id: number): Observable<Ranking>{
+    return this.httpClient.get<Ranking>('http://localhost:8080/ranking/${id}');
+  }
+
 }
 export interface Ranking{
+  id: number;
   category: string;
   descroption: string;
 }

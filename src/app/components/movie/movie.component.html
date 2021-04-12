@@ -1,8 +1,13 @@
 
 <div>
-   {{movieArray[1].title}}<br />
-   {{movieArray[2].logo}}<br />
-
- <a *ngFor="let movie on movieArray">{{movie}}</a>
+  <table>
+<tr><th>tytuł</th><th>Logo</th><th>Rok produkcji</th>
+</tr>
+<tr *ngFor="let movie of movieArray">
+  <td >{{movie.title}}</td>
+  <td >{{movie.logo}}</td>
+  <td >{{movie.year}}</td>
+</tr>
+  </table>
 </div>
 

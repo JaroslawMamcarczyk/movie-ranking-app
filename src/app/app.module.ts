@@ -9,6 +9,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
 import { ContentComponent } from './components/content/content.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RankingDetailsComponent } from './components/ranking-details/ranking-details.component';
 
 
 
@@ -21,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ContentComponent,
     HeaderComponent,
     FooterComponent,
+    RankingDetailsComponent,
 
   ],
   imports: [

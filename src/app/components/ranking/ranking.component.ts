@@ -9,7 +9,7 @@ import { Ranking, RankingClientService } from 'src/app/services/ranking-client.s
   styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent implements OnInit {
-  rankingArray: Ranking[];
+  rankingArray: Ranking[] = [];
   constructor(private rankingClientService: RankingClientService) { }
 
   ngOnInit(): void {

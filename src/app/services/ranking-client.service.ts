@@ -14,15 +14,22 @@ export class RankingClientService {
   }
 
   public getRankingById(id: number): Observable<Ranking>{
-    this.url='http://localhost:8080/ranking/'+id;
+    this.url='http://localhost:8080/ranking/{id}?id='+id;
     console.log(this.url);
     return this.httpClient.get<Ranking>(this.url);
   }
 
 }
-export interface Ranking{
+export interface RankingMovie {
   id: number;
-  category: string;
-  description: string;
-  movie: Movie[];
+  title: string;
+  logo: string;
+  year: number;
+}
+
+export interface Ranking {
+  id: number;
+  rankingCategory: string;
+  description?: any;
+  rankingMovie: RankingMovie[];
 }

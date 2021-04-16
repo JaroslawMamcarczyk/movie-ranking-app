@@ -1,7 +1,8 @@
 <div>
-        {{ranking.category}}<br />
-        {{ranking.description}}
-    <ul *ngFor="let movie on ranking.movie">
+        
+       
+    <ul *ngFor="let movie of ranking.rankingMovie">
         <li>{{movie.title}}</li>
     </ul>
 </div>
+

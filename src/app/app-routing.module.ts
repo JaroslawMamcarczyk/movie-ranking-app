@@ -1,16 +1,21 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieComponent } from './components/movie/movie.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import {ContentComponent} from './components/content/content.component';
 import { RankingDetailsComponent } from './components/ranking-details/ranking-details.component';
+import { AddMovieComponent } from './components/add-movie/add-movie.component';
+import {AddRankingComponent} from './components/add-ranking/add-ranking.component';
 
 
 
-const routes: Routes = [
+
+ const routes: Routes= [
   {path: 'movies', component: MovieComponent},
   {path: 'rankings', component: RankingComponent},
   {path: 'rankings/detail/:id', component: RankingDetailsComponent},
+  {path: 'addmovie', component: AddMovieComponent},
+  {path: 'addRanking', component: AddRankingComponent},
   {path: '', component:ContentComponent,pathMatch: 'full'},
   { path: '**', component: ContentComponent }
 

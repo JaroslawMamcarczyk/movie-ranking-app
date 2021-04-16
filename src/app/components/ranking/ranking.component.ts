@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ranking, RankingClientService } from 'src/app/services/ranking-client.service';
 
 
@@ -10,12 +10,18 @@ import { Ranking, RankingClientService } from 'src/app/services/ranking-client.s
 })
 export class RankingComponent implements OnInit {
   rankingArray: Ranking[] = [];
-  constructor(private rankingClientService: RankingClientService) { }
+  constructor(
+              private rankingClientService: RankingClientService,
+              ) { }
 
   ngOnInit(): void {
     this.rankingClientService.getRanking().subscribe(value =>{
       this.rankingArray = value;
     })
+  }
+
+  public onClick(){
+
   }
 
 }

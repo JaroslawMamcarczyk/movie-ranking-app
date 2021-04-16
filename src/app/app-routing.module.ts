@@ -6,6 +6,7 @@ import {ContentComponent} from './components/content/content.component';
 import { RankingDetailsComponent } from './components/ranking-details/ranking-details.component';
 
 
+
 const routes: Routes = [
   {path: 'movies', component: MovieComponent},
   {path: 'rankings', component: RankingComponent},

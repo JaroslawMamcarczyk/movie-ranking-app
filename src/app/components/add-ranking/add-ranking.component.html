@@ -1,1 +1,26 @@
-(dodawanie rankingów)
+<form 
+  novalidate 
+  (ngSubmit)="onSubmit()" 
+  [formGroup]="formGroup"
+  class="form-group"
+>
+<label class="center-block">
+    <span>Tytuł:</span>
+    <input 
+      type="text"
+      formControlName="rankingCategory"
+    >
+  </label>
+<br />
+  <label class="center-block">
+    <span>Opis:</span>
+    <input 
+      type="text"
+      formControlName="description"
+    >
+  </label>
+  <br />
+  <button type="submit" >
+    przejdz do wyboru filmów
+  </button>
+</form>

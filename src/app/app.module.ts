@@ -13,6 +13,7 @@ import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AddRankingComponent } from './components/add-ranking/add-ranking.component';
 import {RouterModule } from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -28,11 +29,13 @@ import {RouterModule } from '@angular/router';
     AddRankingComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    RouterModule,
+    BrowserModule,
     HttpClientModule,
     CommonModule,
-    RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

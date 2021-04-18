@@ -15,8 +15,12 @@ export class RankingClientService {
 
   public getRankingById(id: number): Observable<Ranking>{
     this.url='http://localhost:8080/ranking/{id}?id='+id;
-    console.log(this.url);
     return this.httpClient.get<Ranking>(this.url);
+  }
+
+  public addRanking(ranking:Ranking){
+    this.url='http://localhost:8080/addRanking';
+    this.httpClient.post<Ranking>(this.url, ranking);
   }
 
 }

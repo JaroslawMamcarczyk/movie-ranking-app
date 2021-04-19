@@ -6,6 +6,7 @@ import {ContentComponent} from './components/content/content.component';
 import { RankingDetailsComponent } from './components/ranking-details/ranking-details.component';
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import {AddRankingComponent} from './components/add-ranking/add-ranking.component';
+import { MovieResolver } from './services/movie-client.service';
 
 
 
@@ -15,7 +16,11 @@ import {AddRankingComponent} from './components/add-ranking/add-ranking.componen
   {path: 'rankings', component: RankingComponent},
   {path: 'rankings/detail/:id', component: RankingDetailsComponent},
   {path: 'addmovie', component: AddMovieComponent},
-  {path: 'addRanking', component: AddRankingComponent},
+  {path: 'addRanking', 
+          component: AddRankingComponent, 
+           resolve:{
+                movie: MovieResolver,
+  }},
   {path: '', component:ContentComponent,pathMatch: 'full'},
   { path: '**', component: ContentComponent }
 

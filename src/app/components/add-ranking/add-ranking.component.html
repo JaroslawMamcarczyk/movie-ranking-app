@@ -20,7 +20,13 @@
     >
   </label>
   <br />
-  <button type="submit" >
-    przejdz do wyboru filmów
-  </button>
+  <label>Filmy:</label><br />
+  <label formArrayName="movies" *ngFor="let movies of moviesFormArray.controls; let i = index">
+    <input type="checkbox" [formControlName]="i">
+    {{movieArray[i].title}}<br />
+  </label>
+<br />
+<button type="submit" >
+  zapisz
+</button>
 </form>

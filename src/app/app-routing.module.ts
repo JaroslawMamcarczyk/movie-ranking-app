@@ -1,11 +1,11 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MovieComponent } from './components/movie/movie.component';
-import { RankingComponent } from './components/ranking/ranking.component';
-import {ContentComponent} from './components/content/content.component';
-import { RankingDetailsComponent } from './components/ranking-details/ranking-details.component';
-import { AddMovieComponent } from './components/add-movie/add-movie.component';
-import {AddRankingComponent} from './components/add-ranking/add-ranking.component';
+import { MovieComponent } from './components/movieComponent/movie/movie.component';
+import { RankingComponent } from './components/rankingComponent/ranking/ranking.component';
+import {ContentComponent} from './components/templateComponent/content/content.component';
+import { RankingDetailsComponent } from './components/rankingComponent/ranking-details/ranking-details.component';
+import { AddMovieComponent } from './components/movieComponent/add-movie/add-movie.component';
+import {AddRankingComponent} from './components/rankingComponent/add-ranking/add-ranking.component';
 import { MovieResolver } from './services/movie-client.service';
 
 
@@ -15,7 +15,7 @@ import { MovieResolver } from './services/movie-client.service';
   {path: 'movies', component: MovieComponent},
   {path: 'rankings', component: RankingComponent},
   {path: 'rankings/detail/:id', component: RankingDetailsComponent},
-  {path: 'addmovie', component: AddMovieComponent},
+  {path: 'addMovie', component: AddMovieComponent},
   {path: 'addRanking', 
           component: AddRankingComponent, 
            resolve:{

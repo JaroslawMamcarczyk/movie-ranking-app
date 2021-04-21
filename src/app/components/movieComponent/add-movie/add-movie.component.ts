@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import { MovieClientService, NewMovie } from 'src/app/services/movie-client.service';
 
 @Component({
   selector: 'app-add-movie',
@@ -8,8 +9,9 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class AddMovieComponent implements OnInit {
   public newMovie:FormGroup;
-  private formBuilder:FormBuilder;
-  constructor() { }
+  constructor(
+    private movieService:MovieClientService,
+    private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
     this.newMovie = this.formBuilder.group({
@@ -19,4 +21,13 @@ export class AddMovieComponent implements OnInit {
     });
   }
 
+
+  public onSubmit(){
+    let movie:NewMovie={
+      title: this.newMovie.value.title,
+      logo: this.newMovie.value.logo,
+      year: this.newMovie.value.year
+    }
+    this.movieService.addMovie(movie);
+  }
 }

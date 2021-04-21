@@ -20,7 +20,8 @@ export class RankingClientService {
 
   public addRanking(ranking:NewRanking){
     this.url='http://localhost:8080/addRanking';
-    this.httpClient.post<NewRanking>(this.url, ranking);
+    this.httpClient.post<NewRanking>(this.url, ranking)
+    .subscribe(data=>ranking);
     console.log(ranking);
   }
 
@@ -35,12 +36,12 @@ export interface RankingMovie {
 export interface Ranking {
   id: number;
   rankingCategory: string;
-  description?: any;
+  description: string;
   rankingMovie: RankingMovie[];
 }
 
 export interface NewRanking {
   rankingCategory: string;
-  description?: any;
+  description: string;
   rankingMovie: RankingMovie[];
 }

@@ -1,12 +1,12 @@
 
 <div>
   <table>
-<tr><th>tytuł</th><th>Logo</th><th>Rok produkcji</th>
+<tr><th>tytuł</th><th>Logo</th><th>Rok produkcji</th><th>edytuj</th>
 </tr>
-<tr *ngFor="let movie of movieArray">
+<tr *ngFor="let movie of movieArray; let i = index">
   <td >{{movie.title}}</td>
-  <td >{{movie.logo}}</td>
   <td >{{movie.year}}</td>
+  <td><input type="checkbox" [formControlName]="i"></td>
 </tr>
   </table>
   <button [routerLink]="['/addMovie']">Dodaj</button>

@@ -12,7 +12,10 @@ import { MovieResolver } from './services/movie-client.service';
 
 
  const routes: Routes= [
-  {path: 'movies', component: MovieComponent},
+  {path: 'movies', component: MovieComponent,
+  resolve:{
+    movie: MovieResolver,
+}},
   {path: 'rankings', component: RankingComponent},
   {path: 'rankings/detail/:id', component: RankingDetailsComponent},
   {path: 'addMovie', component: AddMovieComponent},

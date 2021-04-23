@@ -19,10 +19,10 @@ export class RankingClientService {
   }
 
   public addRanking(ranking:NewRanking){
-    this.url='http://localhost:8080/addRanking';
+    this.url='http://localhost:8080/ranking/add';
+    console.log(ranking);
     this.httpClient.post<NewRanking>(this.url, ranking)
     .subscribe(data=>ranking);
-    console.log(ranking);
   }
 
 }

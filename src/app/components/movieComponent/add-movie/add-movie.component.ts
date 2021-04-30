@@ -18,7 +18,6 @@ export class AddMovieComponent implements OnInit {
   ngOnInit(): void {
     this.newMovie = this.formBuilder.group({
         title:[''],
-        logo:[''],
         year:[],
     });
   }
@@ -27,7 +26,6 @@ export class AddMovieComponent implements OnInit {
   public onSubmit(){
     let movie:NewMovie={
       title: this.newMovie.value.title,
-      logo: this.newMovie.value.logo,
       year: this.newMovie.value.year
     }
     this.movieService.addMovie(movie);
@@ -37,7 +35,6 @@ export class AddMovieComponent implements OnInit {
   public submit(){
     let movie:NewMovie={
       title: this.newMovie.value.title,
-      logo: this.newMovie.value.logo,
       year: this.newMovie.value.year
     }
     this.movieService.addMovie(movie);

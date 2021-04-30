@@ -26,13 +26,11 @@ public addMovie(movie:NewMovie){
 export interface Movie{
   id: number;
   title: string;
-  logo: string;
   year: number;
 }
 
 export interface NewMovie{
   title: string;
-  logo: string;
   year: number;
 }
 

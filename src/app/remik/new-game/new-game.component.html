@@ -1,0 +1,64 @@
+<div>
+    <table>
+        <thead>
+        <tr>
+       <th *ngFor ="let player of playerArray">{{player.name}}</th>
+       <th>rozdający</th>
+    </tr>
+    <tr *ngFor = "let part of partArray">
+        <td>{{part.playerOneResult}}</td><td>{{part.playerTwoResult}}</td><td>{{part.playerThreeResult}}</td><td>{{part.playerFourResult}}</td><td>{{part.crupper.name}}</td>
+    </tr>
+    <tr>
+     <td>{{oneScorre}}</td> <td>{{twoScorre}}</td> <td>{{threeScorre}}</td> <td>{{fourScorre}}</td>
+    </tr>
+</thead>
+</table>
+<div>
+<form 
+  novalidate  
+  [formGroup]="newPart"
+  class="form-group"
+>
+<label class="center-block">
+    <span>{{playerArray[0].name}}</span>
+    <input 
+      type="text"
+      formControlName="oneResult"
+    >
+  </label>
+  <br />
+  <label class="center-block">
+    <span>{{playerArray[1].name}}</span>
+    <input 
+      type="text"
+      formControlName="twoResult"
+    >
+  </label>
+  <br />
+  <label class="center-block">
+    <span>{{playerArray[2].name}}</span>
+    <input 
+      type="text"
+      formControlName="threeResult"
+    >
+  </label>
+  <br />
+  <label class="center-block">
+    <span>{{playerArray[3].name}}</span>
+    <input 
+      type="text"
+      formControlName="fourResult"
+    >
+  </label>
+  <br />
+  <label>Rozdający:</label>
+  <label formArrayName="cruppers" *ngFor="let crupper of cruppersFormArray.controls; let i = index">
+    <input type="checkbox" [formControlName]="i">
+    {{playerArray[i].name}}
+  </label>
+  <button (click)="submit()">
+    zapisz
+  </button>
+</form> 
+</div>
+</div>

@@ -14,6 +14,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AddRankingComponent } from './components/rankingComponent/add-ranking/add-ranking.component';
 import {RouterModule } from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NewGameComponent } from './remik/new-game/new-game.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     RankingDetailsComponent,
     AddMovieComponent,
     AddRankingComponent,
+    NewGameComponent,
   ],
   imports: [
     AppRoutingModule,
